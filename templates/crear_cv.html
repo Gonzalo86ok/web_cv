@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Resume</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href = "{% static 'style.css' %}">
+</head>
+<body>
+    <section>
+        <form method="post">
+            {% csrf_token %}
+            <h2>Crear perfil</h2>
+            {{ form.as_p }}
+            <button type="submit">Create resume</button>
+        </form>
+    </section>
+</body>
+</html>
